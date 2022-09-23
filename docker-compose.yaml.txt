@@ -1,0 +1,9 @@
+version: '2.1'
+
+services:
+  web:
+    image: python-facebook_scraping
+    ports: 
+       - 8080:8080 
+    volumes:
+       - ./local_db:/app/local_db

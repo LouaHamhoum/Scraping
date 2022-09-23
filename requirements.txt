@@ -1,0 +1,5 @@
+db-sqlite3
+pandas
+fastapi
+facebook_scraper
+uvicorn
