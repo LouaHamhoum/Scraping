@@ -3,3 +3,4 @@ pandas
 fastapi
 facebook_scraper
 uvicorn
+pytest
