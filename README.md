@@ -1,27 +1,30 @@
-# Scraping
-A Docker image to deploy a Python-FastApi app from a Git repository.
+# Scraping_Facebook_Page
+Create docker image from python docker image and pulled it from DockerHub.
+While installing the requirements for the app from requirements.txt file.
 
-The container will handle the git clone and requirements installing before the app starts for the first time.
-## Features
-Clone from GIT repository
+Once you run the container, the application is launched, it consists of an API of the facebook scraping. 
 
-Install requirements from requirements.txt file
+The command lines to do this are:
 
-## Build application
-Build the Docker image manually by cloning the Git repo.
+> $ docker build -t python-facebook_scraping . -f Dockerfile.txt
 
-$ git clone https://github.com/LouaHamhoum/Scraping.git
+> $ docker-compose -f docker-compose.yaml.txt up -d
 
-$ docker build -t LouaHamhoum/Scraping
+When you access the FastAPI UI from http://127.0.0.1:8080/docs, you can test it through filling the required field with a name of the page that you want to scrap.
+As a results, a database is updated with the results of the scraping.
 
-## Download precreated image
-You can also just download the existing image from DockerHub.
+Example: Amazon Facebook Page
+URL: https://www.facebook.com/Amazon , URL Page Name: Amazon 
+![image](https://user-images.githubusercontent.com/85879445/192097751-a06c3889-d58c-42db-b61a-d2bd098b649f.png)
+ 
+You can also test if the scraping function returns scraping data or not through the test script. 
+ 
+You can run 
+ 
+> >pytest
 
-$ docker pull LouaHamhoum/Scraping
+![image](https://user-images.githubusercontent.com/85879445/192097981-ac2ea826-4fc7-4aa6-a99c-182d2f38a2af.png)
 
-## Files
-The Dockerfile sets up the pipenv environment, and installs the dependencies
 
-The docker-compose.yml defines the 'app' Docker service and how it should be built
 
-The app folder contains the script file and local_db contains the database created 
+
