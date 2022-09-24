@@ -1,6 +1,5 @@
 # Scraping_Facebook_Page
-Create docker image from python docker image and pulled it from DockerHub.
-While installing the requirements for the app from requirements.txt file.
+Create docker image from a python docker image pulled from DockerHub while installing the requirements for the app from requirements.txt file.
 
 Once you run the container, the application is launched, it consists of an API of the facebook scraping. 
 
